@@ -41,7 +41,7 @@
 
     var table = $('#example').DataTable({
         orderCellsTop: true,
-        order: [[0, 'asc']],
+        order: [[1, 'asc']],
         language: {
             url: '//cdn.datatables.net/plug-ins/2.0.2/i18n/uk.json',
         },
