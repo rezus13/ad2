@@ -2,8 +2,6 @@
 
 class Post
 {
-    // we define 3 attributes
-    // they are public so that we can access them using $post->author directly
     public $ad_id;
     public $impressions;
     public $clicks;
@@ -29,7 +27,6 @@ class Post
         $db = Db::getInstance();
         $req = $db->query('SELECT * FROM test_data');
 
-        // we create a list of Post objects from the database results
         foreach ($req->fetchAll() as $post) {
             $list[] = new Post($post['ad_id'], $post['impressions'], $post['clicks'], $post['unique_clicks'], $post['leads'], $post['conversion'], $post['roi']);
         }
@@ -66,7 +63,6 @@ class Post
 
         $req = $db->query('SELECT * FROM test_data');
 
-        // we create a list of Post objects from the database results
         foreach ($req->fetchAll() as $post) {
             $list[] = new Post($post['ad_id'], $post['impressions'], $post['clicks'], $post['unique_clicks'], $post['leads'], $post['conversion'], $post['roi']);
         }
